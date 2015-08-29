@@ -1,7 +1,7 @@
 # Q: What is big data?
 
 * Find FOUR really big datasets. They should be sufficiently different. Cite your sources.
-* Discuss and determine a ranking in terms of "bigness".
+* 1Discuss and determine a ranking in terms of "bigness".
 
 
 I ranked the following four data sets based on veracity and complexity.  These metrics are inversely related, the less veracious data is, the more complex the analysis will be.
