@@ -2,7 +2,7 @@
 
 * Find FOUR really big datasets. They should be sufficiently different. Cite your sources.
 * Discuss and determine a ranking in terms of "bigness".
-* Fill the template below. Replace all (( )) with your answers.
+
 
 I ranked the following four data sets based on veracity and complexity.  These metrics are inversely related, the less veracious data is, the more complex the analysis will be.
 
