@@ -21,6 +21,14 @@
     <link rel="stylesheet" href="../../gitbook/style.css">
     
         
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-bigdata/highlight.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-bigdata/bigdata.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -29,7 +37,7 @@
         
     
     
-    <link rel="next" href="../../learning/week1/our-class.html" />
+    <link rel="next" href="../../learning/week2/index.html" />
     
     
     <link rel="prev" href="../../learning/week1/svg-template.html" />
@@ -40,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.2.2" data-basepath="../.." data-revision="Sun Aug 30 2015 23:17:49 GMT-0600 (MDT)">
+    <div class="book" data-level="1.2.2" data-basepath="../.." data-revision="Mon Aug 31 2015 18:20:59 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -198,23 +206,23 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="learning/week1/our-class.html">
-            
-                
-                    <a href="../../learning/week1/our-class.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.2.3.</b>
-                        
-                        Our-class
-                    </a>
-            
+
+            </ul>
             
         </li>
     
-
-            </ul>
+        <li class="chapter " data-level="1.3" data-path="learning/week2/index.html">
+            
+                
+                    <a href="../../learning/week2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Week 2
+                    </a>
+            
             
         </li>
     
@@ -278,6 +286,87 @@
                         <i class="fa fa-check"></i>
                         
                             <b>2.1.2.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="hackathons/classmates/index.html">
+            
+                
+                    <a href="../../hackathons/classmates/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Classmates
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="hackathons/classmates/data.html">
+            
+                
+                    <a href="../../hackathons/classmates/data.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        Data
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="hackathons/classmates/warmup.html">
+            
+                
+                    <a href="../../hackathons/classmates/warmup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                        Warmup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="hackathons/classmates/analysis.html">
+            
+                
+                    <a href="../../hackathons/classmates/analysis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        Analysis
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="hackathons/classmates/report.html">
+            
+                
+                    <a href="../../hackathons/classmates/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.4.</b>
                         
                         Report
                     </a>
@@ -410,12 +499,12 @@ was it downloaded just last week alone?</p>
 <p> var result
 Let&apos;s create a data array withthe contents: 1,2,3,4,5. This array has 5 items.</p>
 <p>To get the first item, we can use lodash&apos;s <a href="https://lodash.com/docs#first" target="_blank">_.first</a>.</p>
-<p><pre> return _.first(data) </pre></p>
+<p><pre> <span class="keyword">return</span> _.first(data) </pre></p>
 <p>The result is 1.</p>
 <p>To get the first 3 elements, we can use lodash&apos;s <a href="https://lodash.com/docs#take" target="_blank">_.take</a></p>
 <p><pre>
- var result=_.take(data, 3)
- return result
+ <span class="keyword">var</span> result=_.take(data, <span class="number">3</span>)
+ <span class="keyword">return</span> result
 </pre></p>
 <p>The result is 1,2,3.</p>
 <h3 id="array-of-objects">Array of objects</h3>
@@ -425,8 +514,8 @@ Let&apos;s create a data array withthe contents: 1,2,3,4,5. This array has 5 ite
 <p>To retrieve the name field from each object in this array, lodash&apos;s
 <a href="https://lodash.com/docs#pluck" target="_blank">_.pluck</a> is very handy.</p>
 <p><pre>
-var result= _.pluck(data, &apos;name&apos;)
-return result
+<span class="keyword">var</span> result= _.pluck(data, <span class="string">&apos;name&apos;</span>)
+<span class="keyword">return</span> result
 </pre></p>
 <p>The result is John,Mary,Peter.</p>
 <p>We can even display the result nicely as a bullet list</p>
@@ -449,8 +538,8 @@ return result
 <p>Using <a href="https://lodash.com/docs#find" target="_blank">_.find</a>, we can look up an object by its field.</p>
 <p>Let&apos;s try to find out how old Mary is.</p>
 <p><pre>
-var result= _.find(data, {name: &apos;Mary&apos;})
-return result
+<span class="keyword">var</span> result= _.find(data, {name: <span class="string">&apos;Mary&apos;</span>})
+<span class="keyword">return</span> result
 </pre></p>
 <p>Mary is 32 years-old.</p>
 <h2 id="challenges">Challenges</h2>
@@ -461,8 +550,8 @@ return result
 <h3 id="q-what-are-the-ages-of-these-people">Q: What are the ages of these people?</h3>
 <p><pre>
 
-var result=_.pluck(data, &apos;age&apos;)
-return result
+<span class="keyword">var</span> result=_.pluck(data, <span class="string">&apos;age&apos;</span>)
+<span class="keyword">return</span> result
 </pre></p>
 <ul>
 
@@ -486,28 +575,28 @@ return result
 
 <h3 id="q-what-is-the-youngest-age">Q. What is the youngest age?</h3>
 <p><pre>
-var result=_.pluck(data, &apos;age&apos;)
-var min_age=_.min(result)
+<span class="keyword">var</span> result=_.pluck(data, <span class="string">&apos;age&apos;</span>)
+<span class="keyword">var</span> min_age=_.min(result)
 
-return min_age
+<span class="keyword">return</span> min_age
 
 </pre></p>
 <p>The youngest age is 12.</p>
 <h3 id="q-what-is-the-oldest-age">Q. What is the oldest age?</h3>
 <p><pre>
-var result=_.pluck(data, &apos;age&apos;)
-var max_age= _.max(result)
-return max_age
+<span class="keyword">var</span> result=_.pluck(data, <span class="string">&apos;age&apos;</span>)
+<span class="keyword">var</span> max_age= _.max(result)
+<span class="keyword">return</span> max_age
 </pre></p>
 <p>The oldest age is 54.</p>
 <h3 id="q-who-is-the-youngest-person">Q. Who is the youngest person?</h3>
 <p><pre>
-// replace this code with your solution that uses lodash
-// hint: use your previous solution with _.find
-var result=_.pluck(data, &apos;age&apos;)
-var min_age=_.min(result)
-var y= _.find(data, {age: min_age})
-return y 
+<span class="comment">// replace this code with your solution that uses lodash</span>
+<span class="comment">// hint: use your previous solution with _.find</span>
+<span class="keyword">var</span> result=_.pluck(data, <span class="string">&apos;age&apos;</span>)
+<span class="keyword">var</span> min_age=_.min(result)
+<span class="keyword">var</span> y= _.find(data, {age: min_age})
+<span class="keyword">return</span> y 
 </pre></p>
 <p>The youngest person is Jane.</p>
 
@@ -523,7 +612,7 @@ return y
         <a href="../../learning/week1/svg-template.html" class="navigation navigation-prev " aria-label="Previous page: Template Engine"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../learning/week1/our-class.html" class="navigation navigation-next " aria-label="Next page: Our-class"><i class="fa fa-angle-right"></i></a>
+        <a href="../../learning/week2/index.html" class="navigation navigation-next " aria-label="Next page: Week 2"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
