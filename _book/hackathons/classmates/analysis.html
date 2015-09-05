@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2.3" data-basepath="../.." data-revision="Fri Sep 04 2015 15:36:22 GMT-0600 (MDT)">
+    <div class="book" data-level="2.2.3" data-basepath="../.." data-revision="Fri Sep 04 2015 20:44:31 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -534,19 +534,17 @@ more challenges analyses.</p>
 
 <span class="keyword">var</span> body = _.pluck(data.comments,<span class="string">&quot;body&quot;</span>)
  
- <span class="keyword">var</span> food =_.size(_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,<span class="string">&quot;Sushi&quot;</span>)}))
+ <span class="keyword">var</span> noOfSushiLover =_.size(_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,<span class="string">&quot;Sushi&quot;</span>)}))
  
 
-<span class="keyword">return</span> food
+<span class="keyword">return</span> noOfSushiLover
 
-
- 
 
 </pre></p>
-<p>The answer is 5.</p>
+<p>The Number of studen who likes the Sushi as their faviorate food  are 5.</p>
 <h2 id="who-are-the-students-liking-python-the-most">Who are the students liking Python the most?</h2>
 <p><pre>
-<span class="keyword">var</span> r;
+<span class="keyword">var</span> names_array=<span class="string">&quot;&quot;</span>;
 <span class="keyword">var</span> body = _.pluck(data.comments,<span class="string">&quot;body&quot;</span>)
  
  <span class="keyword">var</span> python =_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,<span class="string">&quot;Python&quot;</span>)})
@@ -554,13 +552,11 @@ more challenges analyses.</p>
 n=_.trimLeft(n,<span class="string">&quot;Name: &quot;</span>);
 n= _.first(n.split(<span class="string">&apos;\n&apos;</span>)) ;
 console.log(n);
- r=_(r).concat(n);
+ names_array=_(names_array).concat(n);
 } );
  
- 
- 
 
-<span class="keyword">return</span> r; 
+<span class="keyword">return</span> names_array; 
 
 </pre><div class="console"><pre>console&gt; &quot;William Farmer\r&quot;
 console&gt; &quot;Heather Witte\r&quot;
@@ -573,7 +569,7 @@ console&gt; &quot;Karen Blakemore\r&quot;
 console&gt; &quot;Sanketh S Shetty\r&quot;
 console&gt; &quot;Andrey Shprengel\r&quot;
 </pre></div></p>
-<p>Their names are [object Object],William Farmer
+<p>Their names of persons who likes the python are:- ,William Farmer
 ,Heather Witte
 ,Zach Lamb
 ,Zhili Yang
@@ -599,26 +595,22 @@ console&gt; &quot;Andrey Shprengel\r&quot;
  check=_.pluck(_.sortBy(language,<span class="string">&apos;size&apos;</span>),<span class="string">&apos;lang&apos;</span>);
 <span class="keyword">return</span> _.last(check)
 </pre></p>
-<p>The answer is Java</p>
+<p>There are more Java lover.</p>
 <h2 id="who-like-the-same-food-as-kjblakemore">Who like the same food as <code>kjblakemore</code>?</h2>
 <p><pre>
-<span class="keyword">var</span> r;
-<span class="keyword">var</span> body = _.pluck(data.comments,<span class="string">&quot;body&quot;</span>)
- 
- <span class="keyword">var</span> python =_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,<span class="string">&quot;Karen&quot;</span>)})
-<span class="keyword">var</span> py=_.<span class="keyword">forEach</span>(python, <span class="keyword">function</span>(n) {n= _.last(n.split(<span class="string">&apos;\n&apos;</span>)) ;
-console.log(n);
- r=n;
-} );
- 
- 
- <span class="keyword">return</span> (_.size(_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,r)})))+<span class="number">1</span>
 
  
+ <span class="keyword">var</span> user_kjblakemore =_.filter(data.comments,<span class="keyword">function</span>(n){<span class="keyword">return</span> (n.user.login ==<span class="string">&quot;kjblakemore&quot;</span>);});
 
-</pre><div class="console"><pre>console&gt; &quot;Favorite Food: Vegan&quot;
-</pre></div></p>
-<p>Their names are 2.</p>
+ 
+  <span class="keyword">var</span> food=_.last(user_kjblakemore[<span class="number">0</span>].body.split(<span class="string">&apos;\r&apos;</span>));
+
+<span class="keyword">var</span> user_samefood =_.filter(data.comments,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n.body,food);});
+<span class="keyword">var</span> nameSameFoodPerson=_.first(user_samefood[<span class="number">0</span>].body.split(<span class="string">&apos;\r&apos;</span>));
+ <span class="keyword">return</span> nameSameFoodPerson;
+
+</pre></p>
+<p>The person who like the same food as kjblakemore are Name: Karen Blakemore.</p>
 
                     
                     </section>

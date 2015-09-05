@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.3.1" data-basepath="../.." data-revision="Fri Sep 04 2015 15:36:22 GMT-0600 (MDT)">
+    <div class="book" data-level="1.3.1" data-basepath="../.." data-revision="Fri Sep 04 2015 20:44:31 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -525,30 +525,104 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="report">Report</h1>
-<p>There are 26 students who gave a self-introduction. As a
-class, we brainstormed and came up with a long list of further questions we can
-ask based on this data. Our team chose to tackle on the following:</p>
-<h1 id="-question-1">(Question 1)</h1>
+                        <h1 id="who-has-used-their-last-name-as-the-user-github-id">who has used their last name as the user github id?</h1>
 <p><pre>
-<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
-</pre></p>
-<p>(writeup)</p>
-<h1 id="-question-2">(Question 2)</h1>
+<span class="keyword">var</span> lastnamebody=[];
+<span class="keyword">var</span> <span class="keyword">final</span> =_.filter(data.comments,<span class="keyword">function</span>(n){<span class="keyword">var</span> lastnamebody=n.body.split(<span class="string">&apos;\r&apos;</span>)[<span class="number">0</span>].split(<span class="string">&apos; &apos;</span>)[<span class="number">2</span>];
+<span class="keyword">if</span>(lastnamebody!=undefined)
+lastnamebody=lastnamebody.toLowerCase();
+console.log(lastnamebody)
+<span class="keyword">var</span> login=n.user.login.toLowerCase();
+console.log(login)
+
+<span class="keyword">if</span>(login.indexOf(lastnamebody)&gt;-<span class="number">1</span>)<span class="keyword">return</span> <span class="keyword">true</span>;
+<span class="keyword">else</span>
+<span class="keyword">return</span> <span class="keyword">false</span>;})
+<span class="keyword">return</span> _.size(<span class="keyword">final</span>)
+ 
+</pre><div class="console"><pre>console&gt; &quot;farmer&quot;
+console&gt; &quot;willzfarmer&quot;
+console&gt; &quot;wagar&quot;
+console&gt; &quot;twagar95&quot;
+console&gt; &quot;liew&quot;
+console&gt; &quot;malaokia&quot;
+console&gt; &quot;suhendi&quot;
+console&gt; &quot;fadhilfath&quot;
+console&gt; &quot;witte&quot;
+console&gt; &quot;hswitte&quot;
+console&gt; &quot;lamb&quot;
+console&gt; &quot;zachlamb&quot;
+console&gt; &quot;yang&quot;
+console&gt; &quot;zhya215&quot;
+console&gt; &quot;cronk&quot;
+console&gt; &quot;jocr1627&quot;
+console&gt; &quot;krodinger&quot;
+console&gt; &quot;drewdinger&quot;
+console&gt; &quot;kazakov&quot;
+console&gt; &quot;94kazakov&quot;
+console&gt; &quot;woytarowicz&quot;
+console&gt; &quot;nicolele&quot;
+console&gt; &quot;:&quot;
+console&gt; &quot;satchelspencer&quot;
+console&gt; &quot;romanowski&quot;
+console&gt; &quot;tiro6090&quot;
+console&gt; &quot;linenfelser&quot;
+console&gt; &quot;linenfelser&quot;
+console&gt; &quot;gifford&quot;
+console&gt; &quot;kevinkgifford&quot;
+console&gt; &quot;hsu&quot;
+console&gt; &quot;calebhsu&quot;
+console&gt; &quot;mittal&quot;
+console&gt; &quot;sumi6109&quot;
+console&gt; &quot;illig&quot;
+console&gt; &quot;pail4944&quot;
+console&gt; &quot;kendl&quot;
+console&gt; &quot;domoyeti&quot;
+console&gt; &quot;ding&quot;
+console&gt; &quot;boanding&quot;
+console&gt; &quot;blakemore&quot;
+console&gt; &quot;kjblakemore&quot;
+console&gt; &quot;s&quot;
+console&gt; &quot;sankethsukumarshetty&quot;
+console&gt; &quot;shprengel&quot;
+console&gt; &quot;andreyshprengel&quot;
+console&gt; &quot;mckean&quot;
+console&gt; &quot;co-bri&quot;
+console&gt; undefined
+console&gt; &quot;karisantos&quot;
+console&gt; &quot;berumen&quot;
+console&gt; &quot;anbe6083&quot;
+</pre></div></p>
+<p>the number of people ,who have used their last name in their id are 12</p>
+<h1 id="who-has-the-id-13950166">who has the id 13950166</h1>
 <p><pre>
-<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
+
+<span class="keyword">var</span> idname =_.filter(data.comments,<span class="keyword">function</span>(n){
+<span class="keyword">return</span> n.user.id==<span class="number">13950166</span>
+})
+
+
+<span class="keyword">var</span> body=_.first(idname[<span class="number">0</span>].body.split(<span class="string">&apos;\n&apos;</span>));
+<span class="keyword">return</span> body
 </pre></p>
-<p>(writeup)</p>
-<h1 id="-question-3">(Question 3)</h1>
+<p>Name: TJ Romanowski
+ has the id 13950166</p>
+<h1 id="how-many-people-are-from-computer-science-major">How many people are from  computer science major</h1>
 <p><pre>
-<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
+<span class="keyword">var</span> body = _.pluck(data.comments,<span class="string">&quot;body&quot;</span>)
+ 
+ <span class="keyword">var</span> food =_.size(_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,<span class="string">&quot;Computer&quot;</span>)||_.contains(n,<span class="string">&quot;CS&quot;</span>)||_.contains(n,<span class="string">&quot;cs\r&quot;</span>)}))
+<span class="keyword">return</span> food
 </pre></p>
-<p>(writeup)</p>
-<h1 id="-question-4">(Question 4)</h1>
+<p>Number of people from the computer science are 22</p>
+<h1 id="how-many-ppl-submitted-on-and-befor-the-deadline-8-24-15">How many ppl submitted on and befor the deadline 8/24/15</h1>
 <p><pre>
-<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
-</pre></p>
-<p>(writeup)</p>
+
+<span class="keyword">return</span> _.size(_.pluck(_.filter(data.comments,<span class="keyword">function</span>(chr){
+                            <span class="keyword">return</span> chr.created_at.split(<span class="string">&apos;T&apos;</span>)[<span class="number">0</span>].split(<span class="string">&apos;-&apos;</span>)[<span class="number">2</span>] &lt;=<span class="number">24</span>;}),<span class="string">&quot;body&quot;</span>))
+
+</pre>
+the number of people who submitted before the deadline are  21</p>
 
                     
                     </section>

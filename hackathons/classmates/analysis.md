@@ -12,22 +12,20 @@ more challenges analyses.
 
 var body = _.pluck(data.comments,"body")
  
- var food =_.size(_.filter(body,function(n){return _.contains(n,"Sushi")}))
+ var noOfSushiLover =_.size(_.filter(body,function(n){return _.contains(n,"Sushi")}))
  
 
-return food
+return noOfSushiLover
 
-
- 
 
 {% endlodash %}
 
-The answer is {{result}}.
+The Number of studen who likes the Sushi as their faviorate food  are {{result}}.
 
 ## Who are the students liking Python the most?
 
 {% lodash %}
-var r;
+var names_array="";
 var body = _.pluck(data.comments,"body")
  
  var python =_.filter(body,function(n){return _.contains(n,"Python")})
@@ -35,17 +33,15 @@ var py=_.forEach(python, function(n) {
 n=_.trimLeft(n,"Name: ");
 n= _.first(n.split('\n')) ;
 console.log(n);
- r=_(r).concat(n);
+ names_array=_(names_array).concat(n);
 } );
  
- 
- 
 
-return r; 
+return names_array; 
 
 {% endlodash %}
 
-Their names are {{result}}.
+Their names of persons who likes the python are:- {{result}}.
 
 ## Are there more Javascript lovers or Java lovers?
 
@@ -64,8 +60,7 @@ var body = _.pluck(data.comments,"body")
 return _.last(check)
 {% endlodash %}
 
-The answer is {{result}}
-
+There are more {{result}} lover.
 
 
 
@@ -73,21 +68,18 @@ The answer is {{result}}
 ## Who like the same food as `kjblakemore`?
 
 {% lodash %}
-var r;
-var body = _.pluck(data.comments,"body")
- 
- var python =_.filter(body,function(n){return _.contains(n,"Karen")})
-var py=_.forEach(python, function(n) {n= _.last(n.split('\n')) ;
-console.log(n);
- r=n;
-} );
- 
- 
- return (_.size(_.filter(body,function(n){return _.contains(n,r)})))+1
 
  
+ var user_kjblakemore =_.filter(data.comments,function(n){return (n.user.login =="kjblakemore");});
+
+ 
+  var food=_.last(user_kjblakemore[0].body.split('\r'));
+
+var user_samefood =_.filter(data.comments,function(n){return _.contains(n.body,food);});
+var nameSameFoodPerson=_.first(user_samefood[0].body.split('\r'));
+ return nameSameFoodPerson;
 
 {% endlodash %}
 
 
-Their names are {{result}}.
+The person who like the same food as kjblakemore are {{result}}.
