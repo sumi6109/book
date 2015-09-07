@@ -21,28 +21,28 @@ including the controls, widgets ...etc.
 
 # (Question 1)
 
-![screenshot](screenshot.png)
+![screenshot](Q1.png)
 
 (write your explanation for the reader as to where to look at this chart in order
     to see the answer)
 
 # (Question 2)
 
-![screenshot](screenshot.png)
+![screenshot](Q2.png)
 
 (write your explanation for the reader as to where to look at this chart in order
     to see the answer)
 
 # (Question 3)
 
-![screenshot](screenshot.png)
+![screenshot](Q3.png)
 
 (write your explanation for the reader as to where to look at this chart in order
     to see the answer)
 
 # (Question 4)
 
-![screenshot](screenshot.png)
+![screenshot](Q4.png)
 
 (write your explanation for the reader as to where to look at this chart in order
     to see the answer)
