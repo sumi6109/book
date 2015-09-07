@@ -20,7 +20,7 @@ return noOfSushiLover
 
 
 {% endlodash %}
-{{data.comments|json}}
+
 The Number of studen who likes the Sushi as their faviorate food  are {{result}}.
 
 ## Who are the students liking Python the most?
