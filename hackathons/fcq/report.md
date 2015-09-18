@@ -14,11 +14,32 @@ return "[answer]"
 {% endlodash %}
 
 
-# (Question 2) by (Name)
+# How many instructors have taught each subject?
+ by (KariSantos)
 
 {% lodash %}
-return "[answer]"
+
+var groups =_.groupBy(data,function(d){return d.Subject})
+var result =_.mapValues(groups,function(t){ 
+var pluckinst=_.pluck(t,'Instructors')
+return _.size(_.uniq(_.flatten( _.map(pluckinst,function(t){return _.pluck(t,'name')}))))
+
+
+})
+return result
+
 {% endlodash %}
+{{result|json}}
+
+
+<table>
+{% for key, value in result %}
+    <tr>
+        <td>{{key}}</td>
+        <td>{{value}}</td>
+    </tr>
+{% endfor %}
+</table>
 
 
 # (Question 3) by (Name)
