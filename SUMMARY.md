@@ -15,14 +15,11 @@
     * [Week 3](learning/week3/index.md)
         * [Github API](learning/week3/github-api.md)
         * [Lodash Drills](learning/week3/lodash-drills.md)
-        * [Lodash GroupBy](learning/week3/lodash-groupby.md)        
-
-
-
+        * [Lodash GroupBy](learning/week3/lodash-groupby.md)
     * [Week 4](learning/week4/index.md)
         * [FCQ Report](learning/week4/report.md)
         * [FCQ Viz](learning/week4/viz.md)
->>>>>>> upstream/master
+
 * [Hackathons](hackathons/index.md)
     * [Tinker](hackathons/tinker/index.md)
         * [Method](hackathons/tinker/method.md)
