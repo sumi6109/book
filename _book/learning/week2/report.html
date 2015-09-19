@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.3.1" data-basepath="../.." data-revision="Fri Sep 18 2015 18:30:59 GMT-0600 (MDT)">
+    <div class="book" data-level="1.3.1" data-basepath="../.." data-revision="Fri Sep 18 2015 18:35:37 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -699,79 +699,17 @@
 <span class="keyword">var</span> <span class="keyword">final</span> =_.filter(data.comments,<span class="keyword">function</span>(n){<span class="keyword">var</span> lastnamebody=n.body.split(<span class="string">&apos;\r&apos;</span>)[<span class="number">0</span>].split(<span class="string">&apos; &apos;</span>)[<span class="number">2</span>];
 <span class="keyword">if</span>(lastnamebody!=undefined)
 lastnamebody=lastnamebody.toLowerCase();
-console.log(lastnamebody)
+<span class="comment">//console.log(lastnamebody)</span>
 <span class="keyword">var</span> login=n.user.login.toLowerCase();
-console.log(login)
+<span class="comment">//console.log(login)</span>
 
 <span class="keyword">if</span>(login.indexOf(lastnamebody)&gt;-<span class="number">1</span>)<span class="keyword">return</span> <span class="keyword">true</span>;
 <span class="keyword">else</span>
 <span class="keyword">return</span> <span class="keyword">false</span>;})
 <span class="keyword">return</span> _.size(<span class="keyword">final</span>)
  
-</pre><div class="console">console&gt; &quot;farmer&quot;
-console&gt; &quot;willzfarmer&quot;
-console&gt; &quot;wagar&quot;
-console&gt; &quot;twagar95&quot;
-console&gt; &quot;liew&quot;
-console&gt; &quot;malaokia&quot;
-console&gt; &quot;suhendi&quot;
-console&gt; &quot;fadhilfath&quot;
-console&gt; &quot;witte&quot;
-console&gt; &quot;hswitte&quot;
-console&gt; &quot;lamb&quot;
-console&gt; &quot;zachlamb&quot;
-console&gt; &quot;yang&quot;
-console&gt; &quot;zhya215&quot;
-console&gt; &quot;cronk&quot;
-console&gt; &quot;jocr1627&quot;
-console&gt; &quot;krodinger&quot;
-console&gt; &quot;drewdinger&quot;
-console&gt; &quot;kazakov&quot;
-console&gt; &quot;94kazakov&quot;
-console&gt; &quot;woytarowicz&quot;
-console&gt; &quot;nicolele&quot;
-console&gt; &quot;:&quot;
-console&gt; &quot;satchelspencer&quot;
-console&gt; &quot;romanowski&quot;
-console&gt; &quot;tiro6090&quot;
-console&gt; &quot;linenfelser&quot;
-console&gt; &quot;linenfelser&quot;
-console&gt; &quot;gifford&quot;
-console&gt; &quot;kevinkgifford&quot;
-console&gt; &quot;hsu&quot;
-console&gt; &quot;calebhsu&quot;
-console&gt; &quot;mittal&quot;
-console&gt; &quot;sumi6109&quot;
-console&gt; &quot;illig&quot;
-console&gt; &quot;pail4944&quot;
-console&gt; &quot;kendl&quot;
-console&gt; &quot;domoyeti&quot;
-console&gt; &quot;ding&quot;
-console&gt; &quot;boanding&quot;
-console&gt; &quot;blakemore&quot;
-console&gt; &quot;kjblakemore&quot;
-console&gt; &quot;s&quot;
-console&gt; &quot;sankethsukumarshetty&quot;
-console&gt; &quot;shprengel&quot;
-console&gt; &quot;andreyshprengel&quot;
-console&gt; &quot;mckean&quot;
-console&gt; &quot;co-bri&quot;
-</div><div class="console error">TypeError: Cannot read property &apos;slice&apos; of undefined
-    at Object.myconsole.log (/home/sushant/Desktop/HCIBIGDATA2015/book/node_modules/gitbook-plugin-bigdata/index.js:39:81)
-    at eval (eval at <anonymous> (/home/sushant/Desktop/HCIBIGDATA2015/book/node_modules/gitbook-plugin-bigdata/index.js:49:29), <anonymous>:8:9)
-    at arrayFilter (/home/sushant/Desktop/HCIBIGDATA2015/book/node_modules/lodash/index.js:1384:13)
-    at Function.filter (/home/sushant/Desktop/HCIBIGDATA2015/book/node_modules/lodash/index.js:6309:14)
-    at Object.eval (eval at <anonymous> (/home/sushant/Desktop/HCIBIGDATA2015/book/node_modules/gitbook-plugin-bigdata/index.js:49:29), <anonymous>:5:14)
-    at Object.module.exports.blocks.lodash.process (/home/sushant/Desktop/HCIBIGDATA2015/book/node_modules/gitbook-plugin-bigdata/index.js:53:37)
-    at null.<anonymous> (/home/sushant/.gitbook/versions/2.2.0/lib/template.js:136:21)
-    at /home/sushant/.gitbook/versions/2.2.0/lib/template.js:267:29
-    at _fulfilled (/home/sushant/.gitbook/versions/2.2.0/node_modules/q/q.js:787:54)
-    at self.promiseDispatch.done (/home/sushant/.gitbook/versions/2.2.0/node_modules/q/q.js:816:30)
-    at Promise.promise.promiseDispatch (/home/sushant/.gitbook/versions/2.2.0/node_modules/q/q.js:749:13)
-    at /home/sushant/.gitbook/versions/2.2.0/node_modules/q/q.js:810:14
-    at flush (/home/sushant/.gitbook/versions/2.2.0/node_modules/q/q.js:108:17)
-    at process._tickCallback (node.js:355:11)</anonymous></anonymous></anonymous></anonymous></anonymous></div></p>
-<p>the number of people ,who have used their last name in their id are </p>
+</pre></p>
+<p>the number of people ,who have used their last name in their id are 12</p>
 <h1 id="who-has-the-id-13950166">who has the id 13950166</h1>
 <p><pre>
 

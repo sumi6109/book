@@ -9,9 +9,9 @@ var lastnamebody=[];
 var final =_.filter(data.comments,function(n){var lastnamebody=n.body.split('\r')[0].split(' ')[2];
 if(lastnamebody!=undefined)
 lastnamebody=lastnamebody.toLowerCase();
-console.log(lastnamebody)
+//console.log(lastnamebody)
 var login=n.user.login.toLowerCase();
-console.log(login)
+//console.log(login)
 
 if(login.indexOf(lastnamebody)>-1)return true;
 else
