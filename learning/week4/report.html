@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Analysis | book</title>
+        <title>FCQ Report | book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../hackathons/classmates/report.html" />
+    <link rel="next" href="../../learning/week4/viz.html" />
     
     
-    <link rel="prev" href="../../hackathons/classmates/warmup.html" />
+    <link rel="prev" href="../../learning/week4/index.html" />
     
 
         <!-- head:end -->
@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2.3" data-basepath="../.." data-revision="Fri Sep 18 2015 18:30:59 GMT-0600 (MDT)">
+    <div class="book" data-level="1.5.1" data-basepath="../.." data-revision="Fri Sep 18 2015 18:30:59 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -344,7 +344,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="learning/week4/report.html">
+        <li class="chapter active" data-level="1.5.1" data-path="learning/week4/report.html">
             
                 
                     <a href="../../learning/week4/report.html">
@@ -497,7 +497,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.3" data-path="hackathons/classmates/analysis.html">
+        <li class="chapter " data-level="2.2.3" data-path="hackathons/classmates/analysis.html">
             
                 
                     <a href="../../hackathons/classmates/analysis.html">
@@ -693,92 +693,38 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="analysis">Analysis</h1>
-<p>After completing the warmup exercises, your task is to do four more slightly
-more challenges analyses.</p>
-<h2 id="how-many-students-like-sushi-as-their-favorite-food">How many students like sushi as their favorite food?</h2>
+                        <p></p>
+<h1 id="report">Report</h1>
+<p>As a team, answer all the questions the team&apos;s members submitted on our
+<a href="https://github.com/bigdatahci2015/forum/issues/14" target="_blank">course forum</a>. Each
+team member is responsible for one question. But everyone should work together
+to come up with a good solution. Your answer should consist of Lodash code
+and a brief writeup. Utilize <code>_.map</code>, <code>_.filter</code>, <code>_.group</code> ...etc. Do not
+use any for loop.</p>
+<p>It is important for everyone to understand all the solutions and make sure you
+will be able to independently reproduce these solutions when asked to do so.
+Coming up, we will incorporate variations of these questions into a future hackathon
+ and you are expected to be capable of reproducing and adapting your solutions.</p>
+<h1 id="-question-1-by-name">(Question 1) by (Name)</h1>
 <p><pre>
-
-
-<span class="keyword">var</span> body = _.pluck(data.comments,<span class="string">&quot;body&quot;</span>)
- 
- <span class="keyword">var</span> noOfSushiLover =_.size(_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,<span class="string">&quot;Sushi&quot;</span>)}))
- 
-
-<span class="keyword">return</span> noOfSushiLover
-
-
+<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
 </pre></p>
-<p>The Number of studen who likes the Sushi as their faviorate food  are 5.</p>
-<h2 id="who-are-the-students-liking-python-the-most">Who are the students liking Python the most?</h2>
+<h1 id="-question-2-by-name">(Question 2) by (Name)</h1>
 <p><pre>
-<span class="keyword">var</span> names_array=<span class="string">&quot;&quot;</span>;
-<span class="keyword">var</span> body = _.pluck(data.comments,<span class="string">&quot;body&quot;</span>)
- 
- <span class="keyword">var</span> python =_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,<span class="string">&quot;Python&quot;</span>)})
-<span class="keyword">var</span> py=_.<span class="keyword">forEach</span>(python, <span class="keyword">function</span>(n) {
-n=_.trimLeft(n,<span class="string">&quot;Name: &quot;</span>);
-n= _.first(n.split(<span class="string">&apos;\n&apos;</span>)) ;
-console.log(n);
- names_array=_(names_array).concat(n);
-} );
- 
-
-<span class="keyword">return</span> names_array; 
-
-</pre><div class="console">console&gt; &quot;William Farmer\r&quot;
-console&gt; &quot;Heather Witte\r&quot;
-console&gt; &quot;Zach Lamb\r&quot;
-console&gt; &quot;Zhili Yang\r&quot;
-console&gt; &quot;John Cronk\r&quot;
-console&gt; &quot;Denis Kazakov\r&quot;
-console&gt; &quot;Caleb Hsu\r&quot;
-console&gt; &quot;Karen Blakemore\r&quot;
-console&gt; &quot;Sanketh S Shetty\r&quot;
-console&gt; &quot;Andrey Shprengel\r&quot;
-</div></p>
-<p>Their names of persons who likes the python are:- ,William Farmer
-,Heather Witte
-,Zach Lamb
-,Zhili Yang
-,John Cronk
-,Denis Kazakov
-,Caleb Hsu
-,Karen Blakemore
-,Sanketh S Shetty
-,Andrey Shprengel
-.</p>
-<h2 id="are-there-more-javascript-lovers-or-java-lovers">Are there more Javascript lovers or Java lovers?</h2>
-<p>var check;
-<pre>
-
-<span class="keyword">var</span> body = _.pluck(data.comments,<span class="string">&quot;body&quot;</span>)
- 
- <span class="keyword">var</span> Javascript =_.size(_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,<span class="string">&quot;Javascript&quot;</span>)}))
- <span class="keyword">var</span> javascript =_.size(_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,<span class="string">&quot;javascript&quot;</span>)}))
- <span class="keyword">var</span> Javascript_total=_.add(Javascript,javascript)
- <span class="keyword">var</span> Java =_.size(_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,<span class="string">&quot;Java&quot;</span>)}))
- 
- <span class="keyword">var</span> language =[{<span class="string">&apos;lang&apos;</span> : <span class="string">&apos;Java&apos;</span> ,<span class="string">&apos;size&apos;</span> : Java},{<span class="string">&apos;lang&apos;</span> : <span class="string">&apos;Javascript&apos;</span> ,<span class="string">&apos;size&apos;</span> : Javascript_total}]
- check=_.pluck(_.sortBy(language,<span class="string">&apos;size&apos;</span>),<span class="string">&apos;lang&apos;</span>);
-<span class="keyword">return</span> _.last(check)
+<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
 </pre></p>
-<p>There are more Java lover.</p>
-<h2 id="who-like-the-same-food-as-kjblakemore">Who like the same food as <code>kjblakemore</code>?</h2>
+<h1 id="-question-3-by-name">(Question 3) by (Name)</h1>
 <p><pre>
-
- 
- <span class="keyword">var</span> user_kjblakemore =_.filter(data.comments,<span class="keyword">function</span>(n){<span class="keyword">return</span> (n.user.login ==<span class="string">&quot;kjblakemore&quot;</span>);});
-
- 
-  <span class="keyword">var</span> food=_.last(user_kjblakemore[<span class="number">0</span>].body.split(<span class="string">&apos;\r&apos;</span>));
-
-<span class="keyword">var</span> user_samefood =_.filter(data.comments,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n.body,food);});
-<span class="keyword">var</span> nameSameFoodPerson=_.first(user_samefood[<span class="number">0</span>].body.split(<span class="string">&apos;\r&apos;</span>));
- <span class="keyword">return</span> nameSameFoodPerson;
-
+<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
 </pre></p>
-<p>The person who like the same food as kjblakemore are Name: Karen Blakemore.</p>
+<h1 id="-question-4-by-name">(Question 4) by (Name)</h1>
+<p><pre>
+<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
+</pre></p>
+<h1 id="-question-5-by-name">(Question 5) by (Name)</h1>
+<p><pre>
+<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
+</pre></p>
 
                     
                     </section>
@@ -789,10 +735,10 @@ console&gt; &quot;Andrey Shprengel\r&quot;
         </div>
 
         
-        <a href="../../hackathons/classmates/warmup.html" class="navigation navigation-prev " aria-label="Previous page: Warmup"><i class="fa fa-angle-left"></i></a>
+        <a href="../../learning/week4/index.html" class="navigation navigation-prev " aria-label="Previous page: Week 4"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../hackathons/classmates/report.html" class="navigation navigation-next " aria-label="Next page: Report"><i class="fa fa-angle-right"></i></a>
+        <a href="../../learning/week4/viz.html" class="navigation navigation-next " aria-label="Next page: FCQ Viz"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
