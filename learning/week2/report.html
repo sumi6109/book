@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -48,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.3.1" data-basepath="../.." data-revision="Mon Sep 21 2015 00:01:49 GMT-0600 (MDT)">
+    <div class="book" data-level="1.3.1" data-basepath="../.." data-revision="Mon Sep 21 2015 18:21:20 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -379,6 +383,72 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6" data-path="learning/week5/index.html">
+            
+                
+                    <a href="../../learning/week5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Week 5
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="learning/week5/birdstrike-report.html">
+            
+                
+                    <a href="../../learning/week5/birdstrike-report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.1.</b>
+                        
+                        Birdstrike Report
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="learning/week5/viz-steps.html">
+            
+                
+                    <a href="../../learning/week5/viz-steps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.2.</b>
+                        
+                        Viz Intro
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="learning/week5/viz-drills.html">
+            
+                
+                    <a href="../../learning/week5/viz-drills.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.3.</b>
+                        
+                        Viz Drills
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -583,6 +653,42 @@
             
         </li>
     
+        <li class="chapter " data-level="2.4" data-path="hackathons/birdstrikes/index.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Birdstrikes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="hackathons/birdstrikes/report.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -694,50 +800,38 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="who-has-used-their-last-name-as-the-user-github-id">who has used their last name as the user github id?</h1>
-<p><pre>
-<span class="keyword">var</span> lastnamebody=[];
-<span class="keyword">var</span> <span class="keyword">final</span> =_.filter(data.comments,<span class="keyword">function</span>(n){<span class="keyword">var</span> lastnamebody=n.body.split(<span class="string">&apos;\r&apos;</span>)[<span class="number">0</span>].split(<span class="string">&apos; &apos;</span>)[<span class="number">2</span>];
-<span class="keyword">if</span>(lastnamebody!=undefined)
+<p><pre><code>var lastnamebody=[];
+var final =_.filter(data.comments,function(n){var lastnamebody=n.body.split(&apos;\r&apos;)[0].split(&apos; &apos;)[2];
+if(lastnamebody!=undefined)
 lastnamebody=lastnamebody.toLowerCase();
-<span class="comment">//console.log(lastnamebody)</span>
-<span class="keyword">var</span> login=n.user.login.toLowerCase();
-<span class="comment">//console.log(login)</span>
+//console.log(lastnamebody)
+var login=n.user.login.toLowerCase();
+//console.log(login)
 
-<span class="keyword">if</span>(login.indexOf(lastnamebody)&gt;-<span class="number">1</span>)<span class="keyword">return</span> <span class="keyword">true</span>;
-<span class="keyword">else</span>
-<span class="keyword">return</span> <span class="keyword">false</span>;})
-<span class="keyword">return</span> _.size(<span class="keyword">final</span>)
- 
-</pre></p>
+if(login.indexOf(lastnamebody)&gt;-1)return true;
+else
+return false;})
+return _.size(final)</code></pre></p>
 <p>the number of people ,who have used their last name in their id are 12</p>
 <h1 id="who-has-the-id-13950166">who has the id 13950166</h1>
-<p><pre>
-
-<span class="keyword">var</span> idname =_.filter(data.comments,<span class="keyword">function</span>(n){
-<span class="keyword">return</span> n.user.id==<span class="number">13950166</span>
+<p><pre><code>var idname =_.filter(data.comments,function(n){
+return n.user.id==13950166
 })
 
 
-<span class="keyword">var</span> body=_.first(idname[<span class="number">0</span>].body.split(<span class="string">&apos;\n&apos;</span>));
-<span class="keyword">return</span> body
-</pre></p>
+var body=_.first(idname[0].body.split(&apos;\n&apos;));
+return body</code></pre></p>
 <p>Name: TJ Romanowski
  has the id 13950166</p>
 <h1 id="how-many-people-are-from-computer-science-major">How many people are from  computer science major</h1>
-<p><pre>
-<span class="keyword">var</span> body = _.pluck(data.comments,<span class="string">&quot;body&quot;</span>)
+<p><pre><code>var body = _.pluck(data.comments,&quot;body&quot;)
  
- <span class="keyword">var</span> food =_.size(_.filter(body,<span class="keyword">function</span>(n){<span class="keyword">return</span> _.contains(n,<span class="string">&quot;Computer&quot;</span>)||_.contains(n,<span class="string">&quot;CS&quot;</span>)||_.contains(n,<span class="string">&quot;cs\r&quot;</span>)}))
-<span class="keyword">return</span> food
-</pre></p>
+ var food =_.size(_.filter(body,function(n){return _.contains(n,&quot;Computer&quot;)||_.contains(n,&quot;CS&quot;)||_.contains(n,&quot;cs\r&quot;)}))
+return food</code></pre></p>
 <p>Number of people from the computer science are 22</p>
 <h1 id="how-many-ppl-submitted-on-and-befor-the-deadline-8-24-15">How many ppl submitted on and befor the deadline 8/24/15</h1>
-<p><pre>
-
-<span class="keyword">return</span> _.size(_.pluck(_.filter(data.comments,<span class="keyword">function</span>(chr){
-                            <span class="keyword">return</span> chr.created_at.split(<span class="string">&apos;T&apos;</span>)[<span class="number">0</span>].split(<span class="string">&apos;-&apos;</span>)[<span class="number">2</span>] &lt;=<span class="number">24</span>;}),<span class="string">&quot;body&quot;</span>))
-
-</pre>
+<p><pre><code>return _.size(_.pluck(_.filter(data.comments,function(chr){
+                            return chr.created_at.split(&apos;T&apos;)[0].split(&apos;-&apos;)[2] <=24;}),"body"))< code=""></=24;}),"body"))<></code></pre>
 the number of people who submitted before the deadline are  21</p>
 
                     
@@ -759,6 +853,14 @@ the number of people who submitted before the deadline are  21</p>
 
         
 <script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/bigdata.js"></script>
+    
+
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
