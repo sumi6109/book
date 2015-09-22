@@ -19,9 +19,6 @@
     * [Week 4](learning/week4/index.md)
         * [FCQ Report](learning/week4/report.md)
         * [FCQ Viz](learning/week4/viz.md)
-
-
-
     * [Week 5](learning/week5/index.md)        
         * [Birdstrike Report](learning/week5/birdstrike-report.md)        
         * [Viz Intro](learning/week5/viz-steps.md)        
