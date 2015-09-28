@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-bigdata/jquery.jsonview.css">
+        
+    
+        
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
         
     
@@ -52,7 +56,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.6.2" data-basepath="../.." data-revision="Fri Sep 25 2015 22:52:36 GMT-0600 (MDT)">
+    <div class="book" data-level="1.6.2" data-basepath="../.." data-revision="Sun Sep 27 2015 21:00:32 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -966,7 +970,7 @@ task is to add code to complete each exercise.</p>
 
 function computeHeight(d, i){
     // TODO: fix this to return the correct height
-    return 10 + i * 50
+    return d.pop/10000000
 }
 
 data.viz = _.map(data.countries, function(d, i){
@@ -977,7 +981,7 @@ data.viz = _.map(data.countries, function(d, i){
     })</code></pre></p>
 <h3 id="step-3-template">Step 3: Template</h3>
 <p></p><h4>template.foo</h4> <pre><code>&lt;rect x=&quot;${d.x}&quot;
-     width=&quot;20&quot;
+     width=&quot;5&quot;
      height=&quot;${d.height}&quot;
      style=&quot;fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)&quot; /&gt;</code></pre><p></p>
 <h3 id="step-4-populate">Step 4: Populate</h3>
@@ -992,53 +996,53 @@ return result.join(&apos;\n&apos;)</code></pre></p>
 <p>The resulting svg tags are rendered as below</p>
 <div style="border:1px solid grey; padding:5px;"><svg height="500" width="800">
 
-<rect x="0" width="20" height="10" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
+<rect x="0" width="5" height="139.3783836" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
 
 
 
 
-<rect x="20" width="20" height="60" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
+<rect x="20" width="5" height="126.7401849" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
 
 
 
 
-<rect x="40" width="20" height="110" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
+<rect x="40" width="5" height="32.2583006" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
 
 
 
 
-<rect x="60" width="20" height="160" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
+<rect x="60" width="5" height="2.5281224" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
 
 </svg><pre><code>
 
 
 &lt;rect x=&quot;0&quot;
-     width=&quot;20&quot;
-     height=&quot;10&quot;
+     width=&quot;5&quot;
+     height=&quot;139.3783836&quot;
      style=&quot;fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)&quot; /&gt;
 
 
 
 
 &lt;rect x=&quot;20&quot;
-     width=&quot;20&quot;
-     height=&quot;60&quot;
+     width=&quot;5&quot;
+     height=&quot;126.7401849&quot;
      style=&quot;fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)&quot; /&gt;
 
 
 
 
 &lt;rect x=&quot;40&quot;
-     width=&quot;20&quot;
-     height=&quot;110&quot;
+     width=&quot;5&quot;
+     height=&quot;32.2583006&quot;
      style=&quot;fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)&quot; /&gt;
 
 
 
 
 &lt;rect x=&quot;60&quot;
-     width=&quot;20&quot;
-     height=&quot;160&quot;
+     width=&quot;5&quot;
+     height=&quot;2.5281224&quot;
      style=&quot;fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)&quot; /&gt;
 
 
@@ -1052,12 +1056,12 @@ return result.join(&apos;\n&apos;)</code></pre></p>
  {name: &apos;Indonesia&apos;, pop: 25281224}]</code></pre></p>
 <h3 id="step-2-define-mappers">Step 2: Define Mappers</h3>
 <p><pre><code>function computeX(d, i) {
-    return i * 20
+    return i * 40
 }
 
 function computeHeight(d, i){
     // TODO: fix this to return the correct height
-    return 10 + i * 50
+    return d.pop/10000000
 }
 
 // TODO: add a new mapper function for width
@@ -1067,13 +1071,14 @@ data.viz = _.map(data.countries, function(d, i){
         return {
             x: computeX(d, i),
             height: computeHeight(d, i)
+            
         }    
     })</code></pre></p>
 <h3 id="step-3-template">Step 3: Template</h3>
 <p>(TODO: add template variables for width and height)
 </p><h4>template.foo</h4> <pre><code>&lt;rect x=&quot;${d.x}&quot;
-     width=&quot;20&quot;
-     height=&quot;20&quot;
+     width=&quot;${d.height/10}&quot;
+     height=&quot;${d.height}&quot;
      style=&quot;fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)&quot; /&gt;</code></pre><p></p>
 <h3 id="step-4-populate">Step 4: Populate</h3>
 <p><pre><code>// compile the template.foo into a template function
@@ -1087,53 +1092,53 @@ return result.join(&apos;\n&apos;)</code></pre></p>
 <p>The resulting svg tags are rendered as below</p>
 <div style="border:1px solid grey; padding:5px;"><svg height="500" width="800">
 
-<rect x="0" width="20" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
+<rect x="0" width="13.93783836" height="139.3783836" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
 
 
 
 
-<rect x="20" width="20" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
+<rect x="40" width="12.67401849" height="126.7401849" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
 
 
 
 
-<rect x="40" width="20" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
+<rect x="80" width="3.22583006" height="32.2583006" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
 
 
 
 
-<rect x="60" width="20" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
+<rect x="120" width="0.25281224" height="2.5281224" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
 
 </svg><pre><code>
 
 
 &lt;rect x=&quot;0&quot;
-     width=&quot;20&quot;
-     height=&quot;20&quot;
-     style=&quot;fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)&quot; /&gt;
-
-
-
-
-&lt;rect x=&quot;20&quot;
-     width=&quot;20&quot;
-     height=&quot;20&quot;
+     width=&quot;13.93783836&quot;
+     height=&quot;139.3783836&quot;
      style=&quot;fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)&quot; /&gt;
 
 
 
 
 &lt;rect x=&quot;40&quot;
-     width=&quot;20&quot;
-     height=&quot;20&quot;
+     width=&quot;12.67401849&quot;
+     height=&quot;126.7401849&quot;
      style=&quot;fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)&quot; /&gt;
 
 
 
 
-&lt;rect x=&quot;60&quot;
-     width=&quot;20&quot;
-     height=&quot;20&quot;
+&lt;rect x=&quot;80&quot;
+     width=&quot;3.22583006&quot;
+     height=&quot;32.2583006&quot;
+     style=&quot;fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)&quot; /&gt;
+
+
+
+
+&lt;rect x=&quot;120&quot;
+     width=&quot;0.25281224&quot;
+     height=&quot;2.5281224&quot;
      style=&quot;fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)&quot; /&gt;
 
 
@@ -1168,11 +1173,11 @@ return result.join(&apos;\n&apos;)</code></pre></p>
     
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/jquery.jsonview.js"></script>
     
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
     
 
 <script>
