@@ -40,3 +40,6 @@
         * [Report](hackathons/fcq/report.md)
     * [Birdstrikes](hackathons/birdstrikes/index.md)         
         * [Report](hackathons/birdstrikes/report.md)
+    * [Open](hackathons/open/index.md)         
+        * [Warmup](hackathons/open/warmup.md)
+        * [Report](hackathons/open/report.md)
