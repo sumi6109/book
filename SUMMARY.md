@@ -25,6 +25,10 @@
         * [Viz Drills](learning/week5/viz-drills.md)                
         * [Viz Drills](learning/week5/viz-drills.md)    
         * [Viz Pokemon](learning/week5/viz-pokemon.md)                
+    * [Week 6](learning/week6/index.md)        
+        * [Design pattern changes](learning/week6/design-study.md)        
+        * [Mongodb Setup](learning/week6/mongodb-setup.md)     
+        * [Mongodb Drills](learning/week6/mongodb-drills.md)                
 
 * [Hackathons](hackathons/index.md)
     * [Tinker](hackathons/tinker/index.md)
